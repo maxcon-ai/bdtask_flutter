@@ -96,24 +96,26 @@ class _CalculatorHomeState extends State<CalculatorHome> {
         children: [
           Expanded(
             flex: 3,
-            child: Container(
-              child:Column(
-                children: [
-                  Container(
-                    alignment: Alignment.centerRight,
-                    padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
-                    child: Text(equation, style: TextStyle(fontSize: equationFontSize),),
-                  ),
+            child: SingleChildScrollView(
+              child: Container(
+                child:Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.centerRight,
+                      padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      child: Text(equation, style: TextStyle(fontSize: equationFontSize),),
+                    ),
 
 
-                  Container(
-                    alignment: Alignment.centerRight,
-                    padding: EdgeInsets.fromLTRB(10, 30, 5, 0),
-                    child: Text(result, style: TextStyle(fontSize: resultFontSize),),
-                  ),
-                ],
+                    Container(
+                      alignment: Alignment.centerRight,
+                      padding: EdgeInsets.fromLTRB(10, 30, 5, 0),
+                      child: Text(result, style: TextStyle(fontSize: resultFontSize),),
+                    ),
+                  ],
+                ),
+                color: Colors.grey,
               ),
-              color: Colors.grey,
             ),
           ),
           Expanded(
